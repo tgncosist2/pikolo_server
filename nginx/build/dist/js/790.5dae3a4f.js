@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkpikolo_vuejs"]=self["webpackChunkpikolo_vuejs"]||[]).push([[790],{5790:function(u,n,e){e.r(n),e.d(n,{default:function(){return i}});var r=e(6768);function t(u,n,e,t,o,s){return(0,r.uX)(),(0,r.CE)("div",null," 이건 테스트 페이지 입니다. ")}var o={},s=e(1241);const c=(0,s.A)(o,[["render",t]]);var i=c}}]);
+//# sourceMappingURL=790.5dae3a4f.js.map

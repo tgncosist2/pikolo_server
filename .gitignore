@@ -1,3 +1,4 @@
 oracle/oradata/
 fullchain.pem
 privkey.pem
+app.jar

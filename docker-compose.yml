@@ -20,6 +20,7 @@ services:
 
   my-spring:
     build: ./openJDK
+    container_name: my-spring
     expose:
       - "8080"
     environment:

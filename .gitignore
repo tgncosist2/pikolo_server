@@ -3,3 +3,4 @@ fullchain.pem
 privkey.pem
 app.jar
 images/
+query/

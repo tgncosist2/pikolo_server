@@ -11,23 +11,25 @@ services:
       - ./nginx/build/dist:/usr/share/nginx/html:ro
       - ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf:ro
       - ./nginx/certbot:/etc/nginx/certbot
+      - /home/pikolo/project_pikolo/images:/usr/share/nginx/html/images
+    environment:
+      - TZ=Asia/Seoul
     networks:
       - pikolo-network
     restart: always
 
   my-spring:
     build: ./openJDK
-    # container_name: my-spring
-    # ports:
-    #  - "8080:8080"
     expose:
       - "8080"
     environment:
       - SPRING_DATASOURCE_URL=jdbc:oracle:thin:@my-oracle:1521:ORCL
       - SPRING_DATASOURCE_USERNAME=pikolo
       - SPRING_DATASOURCE_PASSWORD=pikolo
+      - TZ=Asia/Seoul
     volumes:
       - ./openJDK/build/app.jar:/app/app.jar
+      - /home/pikolo/project_pikolo/images:/app/images
     command: ["java", "-jar", "/app/app.jar"]
     depends_on:
       my-oracle:
@@ -45,6 +47,7 @@ services:
       - ORACLE_SID=ORCL
       - ORACLE_PWD=1234
       - ORACLE_CHARACTERSET=KO16MSWIN949
+      - TZ=Asia/Seoul
     volumes:
       - ./oracle/oradata:/opt/oracle/oradata
     healthcheck:

@@ -4,3 +4,4 @@ privkey.pem
 app.jar
 images/
 query/
+nginx/build

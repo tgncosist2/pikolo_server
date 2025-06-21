@@ -47,7 +47,7 @@ services:
     environment:
       - ORACLE_SID=ORCL
       - ORACLE_PWD=1234
-      - ORACLE_CHARACTERSET=KO16MSWIN949
+      - ORACLE_CHARACTERSET=AL32UTF8
       - TZ=Asia/Seoul
     volumes:
       - ./oracle/oradata:/opt/oracle/oradata
